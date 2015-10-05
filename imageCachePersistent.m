@@ -23,7 +23,7 @@
     NSString *pathDirectory = [rootPathDirectory stringByAppendingPathComponent:directory];
     NSLog(@"Init Cache -> cachesDirectory: %@", pathDirectory);
 
-    _queue = dispatch_queue_create("com.MedPics.imageCache", DISPATCH_QUEUE_CONCURRENT);
+    _queue = dispatch_queue_create("com.JonathanOlesz.ImageCachePersistent", DISPATCH_QUEUE_CONCURRENT);
     dispatch_queue_t priority = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
     dispatch_set_target_queue(_queue, priority);
     
